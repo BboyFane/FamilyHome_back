@@ -74,8 +74,8 @@ app.use('/token', require('./routes/tokens'))
 app.use('/notes', require('./routes/notes'))
 
 
+var port = env.port || process.env.PORT;
 
-
-app.listen(env.port, function() {
-    console.log("The server is running on port", env.port)
+app.listen(port, function() {
+    console.log("The server is running on port", port)
 })
